@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import com.github.stedestro.day01.AOCDay01;
+import com.github.stedestro.day02.AOCDay02;
 
 public class AdventOfCode2024 {
     public static void main(String[] args) {
@@ -29,6 +30,12 @@ public class AdventOfCode2024 {
                 break;
             case "01b":
                 System.out.println("Answer 01b: " + AOCDay01.runPart2(input));
+                break;
+            case "02":
+                System.out.println("Answer 02: " + AOCDay02.runPart1(input));
+                break;
+            case "02b":
+                System.out.println("Answer 02b: " + AOCDay02.runPart2(input));
                 break;
             default:
                 break;

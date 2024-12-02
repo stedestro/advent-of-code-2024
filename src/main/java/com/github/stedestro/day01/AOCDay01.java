@@ -6,6 +6,25 @@ import java.util.HashMap;
 import java.util.List;
 
 public class AOCDay01 {
+
+    private record AOCDay01Input(
+        List<Integer> leftList,
+        List<Integer> rightList
+    ) {}
+
+    private static AOCDay01Input getInput(List<String> input) {
+        List<Integer> listLeft = new ArrayList<Integer>();
+        List<Integer> listRight = new ArrayList<Integer>();
+        
+        for(int i = 0; i < input.size(); i++) {
+            var splitted = input.get(i).split("   ");
+            listLeft.add(Integer.valueOf(splitted[0]));
+            listRight.add(Integer.valueOf(splitted[1]));
+        }
+
+        return new AOCDay01Input(listLeft, listRight);
+    }
+
     
     public static Integer runPart1(List<String> input) {
         AOCDay01Input structuredInput = getInput(input);
@@ -37,24 +56,6 @@ public class AOCDay01 {
         }
 
         return sum;
-    }
-
-    private record AOCDay01Input(
-        List<Integer> leftList,
-        List<Integer> rightList
-    ) {}
-
-    private static AOCDay01Input getInput(List<String> input) {
-        List<Integer> listLeft = new ArrayList<Integer>();
-        List<Integer> listRight = new ArrayList<Integer>();
-        
-        for(int i = 0; i < input.size(); i++) {
-            var splitted = input.get(i).split("   ");
-            listLeft.add(Integer.valueOf(splitted[0]));
-            listRight.add(Integer.valueOf(splitted[1]));
-        }
-
-        return new AOCDay01Input(listLeft, listRight);
     }
 
 }
