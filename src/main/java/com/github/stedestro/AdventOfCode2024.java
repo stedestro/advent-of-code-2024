@@ -8,6 +8,7 @@ import java.util.List;
 
 import com.github.stedestro.day01.AOCDay01;
 import com.github.stedestro.day02.AOCDay02;
+import com.github.stedestro.day03.AOCDay03;
 
 public class AdventOfCode2024 {
     public static void main(String[] args) {
@@ -36,6 +37,12 @@ public class AdventOfCode2024 {
                 break;
             case "02b":
                 System.out.println("Answer 02b: " + AOCDay02.runPart2(input));
+                break;
+            case "03":
+                System.out.println("Answer 03: " + AOCDay03.runPart1(input));
+                break;
+            case "03b":
+                System.out.println("Answer 03b: " + AOCDay03.runPart2(input));
                 break;
             default:
                 break;
